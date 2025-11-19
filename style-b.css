@@ -489,3 +489,124 @@ a {
         padding: 2rem;
     }
 }
+
+/* Timeline (Curriculum) */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(212, 175, 55, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 3rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--col-navy);
+    border: 2px solid var(--col-gold);
+    border-radius: 50%;
+    color: var(--col-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: var(--font-head);
+    z-index: 1;
+}
+
+.timeline-content h3 {
+    color: var(--col-gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.timeline-content p {
+    color: var(--col-platinum);
+    opacity: 0.9;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: var(--col-white);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    border-top: 4px solid var(--col-gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--col-navy-light);
+    font-size: 1.1rem;
+}
+
+.testimonial-card .author strong {
+    display: block;
+    color: var(--col-navy);
+}
+
+.testimonial-card .author span {
+    font-size: 0.9rem;
+    color: var(--col-slate);
+}
+
+/* FAQ */
+.faq-list {
+    margin-top: 3rem;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.faq-item h3 {
+    color: var(--col-gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.faq-item p {
+    color: var(--col-platinum);
+    opacity: 0.8;
+}
+
+/* Image Sizing Fixes */
+.image-block img {
+    max-width: 100%;
+    height: auto;
+    /* Prevent images from becoming overwhelmingly large on wide screens */
+    max-height: 600px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Ensure framed images don't stretch too wide */
+.img-framed {
+    max-width: 500px;
+    /* Constrain the portrait image */
+    margin: 0 auto;
+    display: block;
+}
